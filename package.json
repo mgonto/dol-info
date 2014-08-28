@@ -1,0 +1,34 @@
+{
+  "name": "dol-info",
+  "version": "0.1.0",
+  "description": "A bin script that gives you the dollar information in the blue and official market in Argentina",
+  "bin": {
+    "dol-info": "./bin/dolinfo"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mgonto/dol-info"
+  },
+  "keywords": [
+    "dolar",
+    "blue",
+    "argentina",
+    "valor",
+    "market"
+  ],
+  "author": "Martin Gontovnikas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mgonto/dol-info/issues"
+  },
+  "homepage": "https://github.com/mgonto/dol-info",
+  "dependencies": {
+    "bluebird": "^2.3.2",
+    "colors": "^0.6.2",
+    "commander": "^2.3.0",
+    "request": "^2.40.0"
+  }
+}

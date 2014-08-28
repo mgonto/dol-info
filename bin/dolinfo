@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+var program  = require('commander'),
+    colors   = require('colors'),
+    Promise  = require('bluebird'),
+    request  = Promise.promisify(require("request"));
+
+function clientError(e) {
+    return e.code >= 400 && e.code < 500;
+}
+
+program
+  .version(require('../package.json').version)
+  .usage('Simplemente escribi dol-info')
+  .parse(process.argv);
+
+request({
+  url: 'http://ws.geeklab.com.ar/dolar/get-dolar-json.php',
+  json: true
+}).spread(function(response, info) {
+  console.log('================= DOLAR ================');
+  console.log("Dolar Blue:".underline + ' ' + info.blue.blue);
+  console.log("Dolar Oficial:".underline + ' ' + info.libre.green);
+})
+.catch(clientError, function(e) {
+  console.log('Hubo un error obteniendo la informacion'.red, e);
+});

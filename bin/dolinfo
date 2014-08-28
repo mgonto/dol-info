@@ -5,10 +5,6 @@ var program  = require('commander'),
     Promise  = require('bluebird'),
     request  = Promise.promisify(require("request"));
 
-function clientError(e) {
-    return e.code >= 400 && e.code < 500;
-}
-
 program
   .version(require('../package.json').version)
   .usage('')
@@ -25,3 +21,7 @@ request({
 .catch(clientError, function(e) {
   console.log('Hubo un error obteniendo la informacion'.red, e);
 });
+
+function clientError(e) {
+    return e.code >= 400 && e.code < 500;
+}

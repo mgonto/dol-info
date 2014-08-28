@@ -16,4 +16,4 @@ dol-info
 
 ## Output
 
-![Dolar info](https://cloudup.com/cWtI1pH-u9i)
+![Dolar info](https://cloudup.com/cWtI1pH-u9i+)

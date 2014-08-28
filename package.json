@@ -1,6 +1,6 @@
 {
   "name": "dol-info",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A bin script that gives you the dollar information in the blue and official market in Argentina",
   "bin": {
     "dol-info": "./bin/dolinfo"

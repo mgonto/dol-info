@@ -11,7 +11,7 @@ function clientError(e) {
 
 program
   .version(require('../package.json').version)
-  .usage('Simplemente escribi dol-info')
+  .usage('')
   .parse(process.argv);
 
 request({
